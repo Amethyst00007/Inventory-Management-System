@@ -1,0 +1,474 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6f8;
+    color: #1f2937;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    background: #1f2937;
+    color: white;
+    padding: 30px 20px;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.brand-icon {
+    font-size: 45px;
+}
+
+.brand h1 {
+    font-size: 30px;
+    margin-bottom: 6px;
+}
+
+.brand p {
+    color: #d1d5db;
+    font-size: 15px;
+}
+
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.container {
+    width: 92%;
+    max-width: 1400px;
+    margin: 30px auto;
+}
+
+
+/* =========================
+   DASHBOARD
+========================= */
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-bottom: 28px;
+}
+
+.dashboard-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+.card-icon {
+    font-size: 38px;
+}
+
+.dashboard-card h3 {
+    font-size: 16px;
+    color: #6b7280;
+    margin-bottom: 8px;
+}
+
+.dashboard-card p {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.warning-card {
+    border-left: 5px solid #f59e0b;
+}
+
+
+/* =========================
+   ACTION BAR
+========================= */
+
+.action-bar {
+    background: white;
+    padding: 18px;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 15px;
+    margin-bottom: 20px;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.search-box input {
+    width: 260px;
+}
+
+
+/* =========================
+   INPUTS
+========================= */
+
+input {
+    padding: 11px 13px;
+
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+
+    font-size: 14px;
+
+    outline: none;
+}
+
+input:focus {
+    border-color: #2563eb;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+button {
+    border: none;
+    border-radius: 6px;
+
+    padding: 11px 15px;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+button:hover {
+    transform: translateY(-1px);
+    opacity: 0.9;
+}
+
+.primary-btn {
+    background: #2563eb;
+    color: white;
+}
+
+.secondary-btn {
+    background: #e5e7eb;
+    color: #1f2937;
+}
+
+.success-btn {
+    background: #16a34a;
+    color: white;
+}
+
+.warning-btn {
+    background: #f59e0b;
+    color: white;
+}
+
+.danger-btn {
+    background: #dc2626;
+    color: white;
+}
+
+.edit-btn {
+    background: #6366f1;
+    color: white;
+}
+
+.stock-btn {
+    background: #0891b2;
+    color: white;
+}
+
+.close-btn {
+    background: transparent;
+    color: #6b7280;
+    font-size: 18px;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.form-section {
+    background: white;
+    padding: 25px;
+
+    border-radius: 10px;
+
+    margin-bottom: 25px;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+}
+
+.form-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr)
+        auto;
+
+    gap: 12px;
+
+    align-items: center;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+.section-header h2 {
+    font-size: 22px;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* =========================
+   PRODUCTS
+========================= */
+
+.products-section {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+}
+
+.section-subtitle {
+    color: #6b7280;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    margin-top: 15px;
+}
+
+thead {
+    background: #1f2937;
+    color: white;
+}
+
+th,
+td {
+    padding: 14px 12px;
+
+    text-align: left;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    font-size: 14px;
+}
+
+th {
+    font-weight: 600;
+}
+
+tbody tr:hover {
+    background: #f9fafb;
+}
+
+
+/* =========================
+   LOW STOCK
+========================= */
+
+.low-stock-row {
+    background: #fff7ed;
+}
+
+.low-stock-row:hover {
+    background: #ffedd5;
+}
+
+.low-stock-badge {
+    display: inline-block;
+
+    margin-left: 7px;
+
+    padding: 4px 8px;
+
+    border-radius: 20px;
+
+    background: #dc2626;
+
+    color: white;
+
+    font-size: 10px;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   ACTION BUTTONS
+========================= */
+
+.table-actions {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.table-actions button {
+    padding: 7px 9px;
+    font-size: 12px;
+}
+
+
+/* =========================
+   MESSAGE
+========================= */
+
+#message {
+    margin-bottom: 15px;
+}
+
+.message-success {
+    background: #dcfce7;
+    color: #166534;
+
+    padding: 12px;
+
+    border-radius: 6px;
+}
+
+.message-error {
+    background: #fee2e2;
+    color: #991b1b;
+
+    padding: 12px;
+
+    border-radius: 6px;
+}
+
+
+/* =========================
+   EMPTY TABLE
+========================= */
+
+.empty-message {
+    text-align: center;
+
+    padding: 30px;
+
+    color: #6b7280;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+
+    padding: 25px;
+
+    color: #6b7280;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .action-bar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-box {
+        width: 100%;
+    }
+
+    .search-box input {
+        width: 100%;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .brand h1 {
+        font-size: 22px;
+    }
+
+    .brand-icon {
+        font-size: 35px;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-card {
+        padding: 20px;
+    }
+
+}

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Manpower Projects & Polymers | Inventory</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <div class="header-content">
+
+            <div class="brand">
+                <div class="brand-icon">🏭</div>
+
+                <div>
+                    <h1>Manpower Projects & Polymers</h1>
+                    <p>Inventory & Stock Management System</p>
+                </div>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main class="container">
+
+        <!-- DASHBOARD -->
+        <section class="dashboard">
+
+            <div class="dashboard-card">
+
+                <div class="card-icon">📦</div>
+
+                <div>
+                    <h3>Total Products</h3>
+                    <p id="totalProducts">0</p>
+                </div>
+
+            </div>
+
+
+            <div class="dashboard-card warning-card">
+
+                <div class="card-icon">⚠️</div>
+
+                <div>
+                    <h3>Low Stock</h3>
+                    <p id="lowStock">0</p>
+                </div>
+
+            </div>
+
+
+            <div class="dashboard-card">
+
+                <div class="card-icon">💰</div>
+
+                <div>
+                    <h3>Inventory Value</h3>
+                    <p id="inventoryValue">₹0</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ACTION BAR -->
+        <section class="action-bar">
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search product..."
+                >
+
+                <button class="primary-btn" onclick="searchProducts()">
+                    🔍 Search
+                </button>
+
+                <button class="secondary-btn" onclick="loadProducts()">
+                    🔄 Show All
+                </button>
+
+                <button class="warning-btn" onclick="loadLowStock()">
+                    ⚠️ Low Stock
+                </button>
+
+            </div>
+
+
+            <button
+                class="success-btn"
+                onclick="showAddProductForm()"
+            >
+                ➕ Add Product
+            </button>
+
+        </section>
+
+
+        <!-- MESSAGE -->
+        <div id="message"></div>
+
+
+        <!-- ADD PRODUCT FORM -->
+        <section
+            id="productForm"
+            class="form-section hidden"
+        >
+
+            <div class="section-header">
+
+                <h2>Add New Product</h2>
+
+                <button
+                    class="close-btn"
+                    onclick="hideAddProductForm()"
+                >
+                    ✕
+                </button>
+
+            </div>
+
+
+            <div class="form-grid">
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Product Name"
+                >
+
+                <input
+                    type="text"
+                    id="category"
+                    placeholder="Category"
+                >
+
+                <input
+                    type="number"
+                    id="quantity"
+                    placeholder="Quantity"
+                    min="0"
+                >
+
+                <input
+                    type="number"
+                    id="price"
+                    placeholder="Price"
+                    min="0"
+                    step="0.01"
+                >
+
+                <input
+                    type="text"
+                    id="supplier"
+                    placeholder="Supplier"
+                >
+
+                <button
+                    class="success-btn"
+                    onclick="addProduct()"
+                >
+                    Add Product
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- PRODUCTS -->
+        <section class="products-section">
+
+            <div class="section-header">
+
+                <div>
+                    <h2>Inventory Products</h2>
+                    <p class="section-subtitle">
+                        Manage products, stock and suppliers
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>ID</th>
+                            <th>Product</th>
+                            <th>Category</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                            <th>Supplier</th>
+                            <th>Actions</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="productTable">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Inventory Management System |
+            Manpower Projects & Polymers
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
